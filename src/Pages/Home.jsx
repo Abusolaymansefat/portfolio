@@ -1,6 +1,10 @@
 import React from "react";
 import ThemeToggle from "../components/ThemeToggle/ThemeToggle";
 import StarBackground from "../components/StarBackground/StarBackground";
+import Navbar from "../components/Navbar/Navbar";
+import Banner from "../components/Banner";
+import Contact from "../components/Contact";
+import About from "../components/About";
 
 const Home = () => {
   return (
@@ -11,8 +15,11 @@ const Home = () => {
       <StarBackground />
 
       {/* navbar */}
-
+      <Navbar/>
       {/* main content */}
+      <Banner/>
+      <About/>
+      <Contact/>
 
       {/* Footer */}
     </div>
