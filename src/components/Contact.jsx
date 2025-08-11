@@ -1,9 +1,11 @@
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { FiPhone, FiMail, FiMapPin, FiSend, FiLinkedin } from "react-icons/fi";
 import { useState } from "react";
-import { FaGithub, FaWhatsapp } from "react-icons/fa";
+import { FaArrowUp, FaGithub, FaWhatsapp } from "react-icons/fa";
 
 const Contact = () => {
+  const primaryColor = "#00ff94";
   // Contact info items with links
   const contactItems = [
     {
@@ -78,7 +80,6 @@ const Contact = () => {
     setSubmitStatus(null);
 
     try {
-     
       await new Promise((resolve) => setTimeout(resolve, 1500));
 
       setSubmitStatus("success");
@@ -101,7 +102,9 @@ const Contact = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold mb-4 text-[#00ff94]">Let's Connect</h2>
+          <h2 className="text-4xl font-bold mb-4 text-[#00ff94]">
+            Let's Connect
+          </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             Have a project in mind or want to discuss opportunities? Reach out
             through any of these channels.
@@ -178,7 +181,9 @@ const Contact = () => {
                         className="text-gray-400 group-hover:text-white transition-colors hover:underline flex items-center gap-1"
                       >
                         {item.value}
-                        {item.isExternal && <span className="text-xs opacity-70">(↗)</span>}
+                        {item.isExternal && (
+                          <span className="text-xs opacity-70">(↗)</span>
+                        )}
                       </a>
                     ) : (
                       <p className="text-gray-400 group-hover:text-white transition-colors">
@@ -327,6 +332,15 @@ const Contact = () => {
             </div>
           </motion.div>
         </div>
+        <motion.div
+          animate={{ y: [0, 15, 0], opacity: [0.6, 1, 0.6] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          style={{ color: primaryColor }}
+          className="flex flex-col items-center cursor-pointer mt-6"
+          onClick={() => document.getElementById("home")?.scrollIntoView()}
+        >
+          <FaArrowUp className="text-2xl" />
+        </motion.div>
       </div>
     </section>
   );

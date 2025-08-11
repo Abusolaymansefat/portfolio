@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import React from "react";
 import { FaReact, FaNodeJs, FaDatabase, FaArrowDown } from "react-icons/fa";
@@ -210,7 +211,7 @@ const Skill = () => {
             }}
             style={{ color: primaryColor }}
             className="flex flex-col items-center cursor-pointer"
-            onClick={() => document.getElementById("about")?.scrollIntoView()}
+            onClick={() => document.getElementById("education")?.scrollIntoView()}
           >
             <FaArrowDown className="text-2xl" />
           </motion.div>

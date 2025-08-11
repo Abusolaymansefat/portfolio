@@ -1,7 +1,10 @@
 import React from "react";
-import { FaGraduationCap } from "react-icons/fa";
+import { FaArrowDown, FaGraduationCap } from "react-icons/fa";
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
 
 const educationData = [
+
   {
     degree: "Diploma in Electrical and Electronic Engineering (EEE)",
     institution: "Shymoli Ideal Engineering College, Chittagong",
@@ -18,6 +21,7 @@ const educationData = [
 ];
 
 const Education = () => {
+  const primaryColor = "#00ff94";
   return (
     <section
       id="education"
@@ -53,6 +57,15 @@ const Education = () => {
           ))}
         </div>
       </div>
+      <motion.div
+            animate={{ y: [0, 15, 0], opacity: [0.6, 1, 0.6] }}
+            transition={{ duration: 2, repeat: Infinity }}
+            style={{ color: primaryColor }}
+            className="flex flex-col items-center cursor-pointer mt-6"
+            onClick={() => document.getElementById("projects")?.scrollIntoView()}
+          >
+            <FaArrowDown className="text-2xl" />
+          </motion.div>
     </section>
   );
 };

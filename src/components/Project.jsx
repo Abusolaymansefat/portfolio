@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { FiGithub, FiExternalLink, FiServer } from "react-icons/fi";
@@ -6,6 +7,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { FaArrowDown, FaArrowUp } from "react-icons/fa";
 
 const Project = () => {
   const [activeProject, setActiveProject] = useState(0);
@@ -371,7 +373,17 @@ const Project = () => {
               )}
             </motion.div>
           </div>
+          
         </motion.div>
+        <motion.div
+            animate={{ y: [0, 15, 0], opacity: [0.6, 1, 0.6] }}
+            transition={{ duration: 2, repeat: Infinity }}
+            style={{ color: primaryColor }}
+            className="flex flex-col items-center cursor-pointer mt-6"
+            onClick={() => document.getElementById("contact")?.scrollIntoView()}
+          >
+            <FaArrowDown className="text-2xl" />
+          </motion.div>
       </div>
     </section>
   );
