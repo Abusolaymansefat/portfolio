@@ -5,6 +5,10 @@ import Navbar from "../components/Navbar/Navbar";
 import Banner from "../components/Banner";
 import Contact from "../components/Contact";
 import About from "../components/About";
+import Skill from "../components/Skill";
+import Project from "../components/Project";
+import Education from "../components/Education";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -19,9 +23,13 @@ const Home = () => {
       {/* main content */}
       <Banner/>
       <About/>
+      <Skill/>
+      <Education/>
+      <Project/>
       <Contact/>
 
       {/* Footer */}
+      <Footer/>
     </div>
   );
 };

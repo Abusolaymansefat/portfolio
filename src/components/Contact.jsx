@@ -47,7 +47,7 @@ const Contact = () => {
     {
       icon: <FiMapPin className="text-2xl" />,
       title: "Address",
-      value: "Boliarpur, Savar, Dhaka - 1216, Bangladesh",
+      value: "Laxmirpur, Shador, Dhaka - 1216, Bangladesh",
       color: "#a855f7",
     },
   ];
