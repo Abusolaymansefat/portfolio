@@ -8,9 +8,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { FaArrowDown, FaArrowUp } from "react-icons/fa";
-import EcoTrack from "../assets/Eco Track/Eco Track 1.png";
-import EcoTrac2 from "../assets/Eco Track/Eco Track 2.png";
-import EcoTrac3 from "../assets/Eco Track/Eco Track 3.png";
 
 const Project = () => {
   const [activeProject, setActiveProject] = useState(0);
@@ -21,7 +18,7 @@ const Project = () => {
     {
       name: "Eco Track ",
       description:
-        "The objective of this project is to deliver a robust and user-friendly platform for managing building operations. This includes apartment listings, user agreements, a secure payment system, announcements, and role-based dashboards. The application is built with a modern tech stack, ensuring a seamless and responsive user experience on all devices.",
+        "The objective of this project is to provide a robust and user-friendly platform for managing building operations. Features include apartment listings, user agreements, secure payment processing, announcements, and role-based dashboards. Built with a modern tech stack, the application ensures a seamless and responsive user experience across all devices.",
       technologies: [
         "React",
         "Firebase",
@@ -43,17 +40,16 @@ const Project = () => {
       liveLink: "https://app-orbit-d1fa9.web.app/",
       githubLink: "https://github.com/Abusolaymansefat/eco-track-client",
       serverLink: "https://github.com/Abusolaymansefat/eco-track_server",
-            images: [
+      images: [
         "https://i.ibb.co.com/1JbYDfp0/Eco-Track-1.png",
         "https://i.ibb.co.com/4RktYP7f/Eco-Track-2.png",
         "https://i.ibb.co.com/HfWqxgcv/Eco-Track-3.png",
-        
       ],
     },
     {
       name: "Volunteer Management",
       description:
-        "This is food sharing Platform to share extra food. People share here extra food and add pickup location. This data are listed in the data base and showing available status but not showing expired food.",
+        "A platform that connects volunteers with people and organizations in need. Users can browse current volunteer opportunities, post new requests for help, and manage their volunteer activities. The system tracks volunteer availability and helps coordinate efforts to maximize community support.",
       technologies: [
         "React",
         "Firebase",
@@ -78,7 +74,6 @@ const Project = () => {
         "https://i.ibb.co.com/KxHnj81B/volunteer-management.png",
         "https://i.ibb.co.com/5hsTvQcG/volunteer-management2.png",
         "https://i.ibb.co.com/R4Bm5LTL/volunteer-management4.png",
-        
       ],
     },
     {
@@ -97,8 +92,8 @@ const Project = () => {
         "JWT",
       ],
       challenges: [
-        "Implementing real-time inventory updates",
-        "Implement user dashboard to show the full information and others necessary details to show.",
+        "Developed and deployed a product delivery & parcel management system with seamless booking, tracking, and delivery status updates.",
+        "mplemented parcel add & delivery features to manage logistics efficiently.",
         "Handling JWT authentication properly to manage the authentic registered and non-registered user",
         "Handled CRUD operation properly with JWT.",
         "Optimizing image loading for product gallery.",
@@ -191,9 +186,9 @@ const Project = () => {
               modules={[Autoplay, Pagination, Navigation]}
               className="w-full h-full rounded-xl md:rounded-2xl overflow-hidden shadow-xl md:shadow-2xl"
               autoplay={{
-                delay: 3000, 
+                delay: 3000,
                 disableOnInteraction: false,
-                pauseOnMouseEnter: true, 
+                pauseOnMouseEnter: true,
               }}
               loop={true}
             >

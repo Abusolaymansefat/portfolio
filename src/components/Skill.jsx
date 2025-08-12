@@ -27,30 +27,30 @@ const Skill = () => {
       title: "Frontend",
       icon: <FaReact />,
       skills: [
-        { name: "HTML5", icon: <SiHtml5 />, level: 95 },
-        { name: "CSS3", icon: <SiCss3 />, level: 90 },
-        { name: "JavaScript", icon: <SiJavascript />, level: 95 },
-        { name: "React", icon: <FaReact />, level: 90 },
+        { name: "HTML5", icon: <SiHtml5 />, level: 90 },
+        { name: "CSS3", icon: <SiCss3 />, level: 85 },
+        { name: "JavaScript", icon: <SiJavascript />, level: 80 },
+        { name: "React", icon: <FaReact />, level: 70 },
         { name: "Tailwind CSS", icon: <RiTailwindCssFill />, level: 90 },
-        { name: "Daisy UI", icon: <SiDaisyui />, level: 85 },
+        { name: "Daisy UI", icon: <SiDaisyui />, level: 80 },
       ],
     },
     {
       title: "Backend",
       icon: <FaNodeJs />,
       skills: [
-        { name: "Node.js", icon: <FaNodeJs />, level: 90 },
-        { name: "Express", icon: <SiExpress />, level: 90 },
+        { name: "Node.js", icon: <FaNodeJs />, level: 70 },
+        { name: "Express", icon: <SiExpress />, level: 60 },
         { name: "REST APIs", level: 95 },
         { name: "Authentication", icon: <SiAuth0 />, level: 90 },
-        { name: "JWT", level: 85 },
+        { name: "JWT", level: 70 },
       ],
     },
     {
       title: "Database",
       icon: <FaDatabase />,
       skills: [
-        { name: "MongoDB", icon: <SiMongodb />, level: 90 },
+        { name: "MongoDB", icon: <SiMongodb />, level: 80 },
         { name: "Firebase", icon: <SiFirebase />, level: 80 },
       ],
     },
@@ -60,7 +60,7 @@ const Skill = () => {
       skills: [
         { name: "Git", icon: <SiGit />, level: 90 },
         { name: "Vercel", icon: <IoLogoVercel />, level: 80 },
-        { name: "Render", icon: <SiRender />, level: 85 },
+        { name: "Render", icon: <SiRender />, level: 75 },
       ],
     },
   ];

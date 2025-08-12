@@ -29,19 +29,20 @@ const Navbar = () => {
     <nav
       className={cn(
         "fixed w-full z-40 transition-all duration-300",
-        isScrolled
-          ? "py-3 bg-background/80 backdrop-blur-md shadow-xs"
-          : "py-5"
+        isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
       )}
     >
       <div className="container flex items-center justify-between">
-        <a className="text-xl font-bold text-primary flex items-center" href="#hero">
+        <a
+          className="text-xl font-bold text-primary flex items-center"
+          href="#hero"
+        >
           <span className="relative z-10">
             <h1 className="font-extrabold text-white flex justify-center items-center select-text">
-            <span className="text-[#00ff94]">S</span>
-            <span className="text-[#38bdf8]">EF</span>
-            <span className="text-[#a855f7]">AT</span>
-          </h1>
+              <span className="text-[#00ff94]">S</span>
+              <span className="text-[#38bdf8]">EF</span>
+              <span className="text-[#a855f7]">AT</span>
+            </h1>
           </span>
         </a>
 
