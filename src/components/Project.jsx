@@ -8,6 +8,9 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { FaArrowDown, FaArrowUp } from "react-icons/fa";
+import EcoTrack from "../assets/Eco Track/Eco Track 1.png";
+import EcoTrac2 from "../assets/Eco Track/Eco Track 2.png";
+import EcoTrac3 from "../assets/Eco Track/Eco Track 3.png";
 
 const Project = () => {
   const [activeProject, setActiveProject] = useState(0);
@@ -40,10 +43,11 @@ const Project = () => {
       liveLink: "https://app-orbit-d1fa9.web.app/",
       githubLink: "https://github.com/Abusolaymansefat/eco-track-client",
       serverLink: "https://github.com/Abusolaymansefat/eco-track_server",
-      images: [
-        "https://ibb.co.com/Fb2rCbV5",
-        "https://ibb.co.com/Fb2rCbV5",
-        "https://ibb.co.com/Fb2rCbV5",
+            images: [
+        "https://i.ibb.co.com/1JbYDfp0/Eco-Track-1.png",
+        "https://i.ibb.co.com/4RktYP7f/Eco-Track-2.png",
+        "https://i.ibb.co.com/HfWqxgcv/Eco-Track-3.png",
+        
       ],
     },
     {
@@ -70,10 +74,11 @@ const Project = () => {
       serverLink:
         "https://github.com/Abusolaymansefat/Volunteer-management-server",
       images: [
-        "https://i.ibb.co/KzK85mFV/parcle.png",
-        "https://i.ibb.co/KzK85mFV/parcle.png",
-        "https://i.ibb.co/KzK85mFV/parcle.png",
-        "https://i.ibb.co/KcGSdXCP/Screenshot-2025-08-12-010551.png",
+        "https://i.ibb.co.com/gZNstr8H/Screenshot-2025-08-12-011131.png",
+        "https://i.ibb.co.com/KxHnj81B/volunteer-management.png",
+        "https://i.ibb.co.com/5hsTvQcG/volunteer-management2.png",
+        "https://i.ibb.co.com/R4Bm5LTL/volunteer-management4.png",
+        
       ],
     },
     {
@@ -102,10 +107,10 @@ const Project = () => {
       githubLink: "https://github.com/Abusolaymansefat/zap-shift-client",
       serverLink: "https://github.com/Abusolaymansefat/zap-shift-server",
       images: [
-        "https://ibb.co.com/Hph9KXnG",
-        "https://ibb.co.com/cKvV01zB",
-        "https://ibb.co.com/p6yYyMP8",
-        "https://ibb.co.com/0VqyCdh3",
+        "https://i.ibb.co/KzK85mFV/parcle.png",
+        "https://i.ibb.co/KzK85mFV/parcle.png",
+        "https://i.ibb.co/KzK85mFV/parcle.png",
+        "https://i.ibb.co/KcGSdXCP/Screenshot-2025-08-12-010551.png",
       ],
     },
   ];
@@ -186,9 +191,9 @@ const Project = () => {
               modules={[Autoplay, Pagination, Navigation]}
               className="w-full h-full rounded-xl md:rounded-2xl overflow-hidden shadow-xl md:shadow-2xl"
               autoplay={{
-                delay: 3000, // Rotate every 3 seconds
-                disableOnInteraction: false, // Continue after user interaction
-                pauseOnMouseEnter: true, // Pause when hovered
+                delay: 3000, 
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true, 
               }}
               loop={true}
             >
@@ -373,17 +378,16 @@ const Project = () => {
               )}
             </motion.div>
           </div>
-          
         </motion.div>
         <motion.div
-            animate={{ y: [0, 15, 0], opacity: [0.6, 1, 0.6] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            style={{ color: primaryColor }}
-            className="flex flex-col items-center cursor-pointer mt-6"
-            onClick={() => document.getElementById("contact")?.scrollIntoView()}
-          >
-            <FaArrowDown className="text-2xl" />
-          </motion.div>
+          animate={{ y: [0, 15, 0], opacity: [0.6, 1, 0.6] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          style={{ color: primaryColor }}
+          className="flex flex-col items-center cursor-pointer mt-6"
+          onClick={() => document.getElementById("contact")?.scrollIntoView()}
+        >
+          <FaArrowDown className="text-2xl" />
+        </motion.div>
       </div>
     </section>
   );
