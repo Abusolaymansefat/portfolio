@@ -11,7 +11,7 @@ import {
 } from "react-icons/si";
 
 const About = () => {
-  const primaryColor = "#00ff94";
+  const primaryColor = "#00fffb";
 
   const item = {
     hidden: { opacity: 0, y: 20 },
@@ -30,7 +30,7 @@ const About = () => {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="flex-shrink-0 w-64 h-64 rounded-full overflow-hidden border-4 border-[#00ff94] shadow-xl"
+        className="flex-shrink-0 w-64 h-64 rounded-full overflow-hidden border-4 border-[#00fffb] shadow-xl"
       >
         <img
           src={profileImage}
@@ -57,7 +57,7 @@ const About = () => {
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           variants={item}
-          className="text-6xl font-extrabold text-[#00ff94]"
+          className="text-6xl font-extrabold text-[#00fffb]"
         >
           About Me
         </motion.h1>
@@ -93,7 +93,7 @@ const About = () => {
           variants={item}
           className="bg-gray-800/40 p-6 rounded-2xl border border-gray-700 backdrop-blur-sm shadow-lg"
         >
-          <h3 className="text-2xl font-semibold text-[#00ff94] mb-4 flex items-center">
+          <h3 className="text-2xl font-semibold text-[#00fffb] mb-4 flex items-center">
             🚀 <span className="ml-2">Tech Stack</span>
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">

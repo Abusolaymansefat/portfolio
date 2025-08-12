@@ -11,8 +11,8 @@ import { FaArrowDown, FaArrowUp } from "react-icons/fa";
 
 const Project = () => {
   const [activeProject, setActiveProject] = useState(0);
-  const primaryColor = "#00ff94";
-  const secondaryColor = "#00d1ff";
+  const primaryColor = "#00fffb";
+  const secondaryColor = "#00D1FF";
 
   const projects = [
     {
@@ -284,7 +284,7 @@ const Project = () => {
               transition={{ delay: 0.5 }}
             >
               <h4 className="text-xl sm:text-2xl font-semibold text-gray-200 mb-2 sm:mb-3 md:mb-4">
-                Challenges & Solutions
+                Solutions
               </h4>
               <ul className="space-y-2 sm:space-y-3">
                 {projects[activeProject].challenges.map((challenge, index) => (
@@ -320,7 +320,7 @@ const Project = () => {
                 className="flex items-center gap-2 sm:gap-3 px-5 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-lg md:rounded-xl text-sm sm:text-base md:text-lg font-bold"
                 style={{
                   backgroundColor: primaryColor,
-                  color: "#030712",
+                  color: "#1f2945",
                 }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -339,7 +339,7 @@ const Project = () => {
                 className="flex items-center gap-2 sm:gap-3 px-5 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-lg md:rounded-xl text-sm sm:text-base md:text-lg font-bold border"
                 style={{
                   borderColor: primaryColor,
-                  color: primaryColor,
+                  color: "#1fbf84",
                 }}
                 whileHover={{
                   backgroundColor: `${primaryColor}10`,

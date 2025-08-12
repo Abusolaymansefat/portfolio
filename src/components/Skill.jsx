@@ -19,7 +19,7 @@ import {
 } from "react-icons/si";
 
 const Skill = () => {
-  const primaryColor = "#00ff94";
+  const primaryColor = "#00fffb";
   const grayColor = "#6b7280";
 
   const skillCategories = [
@@ -78,7 +78,7 @@ const Skill = () => {
         >
           <motion.h2
             className="text-4xl font-bold mb-4"
-            style={{ color: primaryColor }}
+            style={{ color: "#00fffb" }}
             whileHover={{ scale: 1.02 }}
           >
             My Skills
@@ -88,7 +88,7 @@ const Skill = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.3 }}
               className="block h-1 mt-2 mx-auto w-24"
-              style={{ backgroundColor: primaryColor, originX: 0 }}
+              style={{ backgroundColor: "#00fffb", originX: 0 }}
             />
           </motion.h2>
           <motion.p

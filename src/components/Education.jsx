@@ -1,5 +1,6 @@
 import React from "react";
 import { FaArrowDown, FaGraduationCap } from "react-icons/fa";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 
 const educationData = [
@@ -20,7 +21,7 @@ const educationData = [
 ];
 
 const Education = () => {
-  const primaryColor = "#00ff94";
+  const primaryColor = "#00fffb";
 
   return (
     <section

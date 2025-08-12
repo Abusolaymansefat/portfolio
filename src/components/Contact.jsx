@@ -5,7 +5,7 @@ import { useState } from "react";
 import { FaArrowUp, FaGithub, FaWhatsapp } from "react-icons/fa";
 
 const Contact = () => {
-  const primaryColor = "#00ff94";
+  const primaryColor = "#00fffb";
   // Contact info items with links
   const contactItems = [
     {
@@ -102,7 +102,7 @@ const Contact = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold mb-4 text-[#00ff94]">
+          <h2 className="text-4xl font-bold mb-4 text-[#00fffb]">
             Let's Connect
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
@@ -223,7 +223,7 @@ const Contact = () => {
             </div>
 
             <div className="relative z-10">
-              <h3 className="text-2xl font-bold mb-6 text-[#00ff94]">
+              <h3 className="text-2xl font-bold mb-6 text-[#00fffb]">
                 Send Me a Message
               </h3>
 
@@ -294,7 +294,7 @@ const Contact = () => {
                   className={`w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-bold transition-all ${
                     isSubmitting
                       ? "bg-gray-700 cursor-not-allowed"
-                      : "bg-[#00ff94] hover:bg-[#00e676] text-gray-900"
+                      : "bg-[#96e2e1] hover:bg-[#00fffb] text-gray-900"
                   }`}
                   whileHover={!isSubmitting ? { scale: 1.02 } : {}}
                   whileTap={!isSubmitting ? { scale: 0.98 } : {}}
