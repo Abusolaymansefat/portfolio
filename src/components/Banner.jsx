@@ -1,4 +1,5 @@
 import React from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useNavigate } from "react-router";
@@ -94,7 +95,7 @@ const Banner = () => {
             <div className="relative w-64 h-64">
               <img
                 src={profileImage}
-                alt="Md Nazmul Hossen"
+                alt="Abu solayman sefat"
                 className="w-full h-full object-cover rounded-full border-4 border-gray-700 shadow-2xl relative z-10"
               />
               {renderFloatingIcons(140, 100)}
