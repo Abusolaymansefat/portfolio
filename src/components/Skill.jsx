@@ -16,6 +16,7 @@ import {
   SiDaisyui,
   SiAuth0,
   SiRender,
+  SiNextdotjs,
 } from "react-icons/si";
 
 const Skill = () => {
@@ -31,6 +32,7 @@ const Skill = () => {
         { name: "CSS3", icon: <SiCss3 />, level: 85 },
         { name: "JavaScript", icon: <SiJavascript />, level: 80 },
         { name: "React", icon: <FaReact />, level: 70 },
+        { name: "Next.js", icon: <SiNextdotjs />, level: 50 },
         { name: "Tailwind CSS", icon: <RiTailwindCssFill />, level: 90 },
         { name: "Daisy UI", icon: <SiDaisyui />, level: 80 },
       ],
