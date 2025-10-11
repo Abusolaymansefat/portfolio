@@ -7,7 +7,9 @@ import {
   SiExpress,
   SiFirebase,
   SiMongodb,
+  SiNextdotjs,
   SiTailwindcss,
+  SiVercel,
 } from "react-icons/si";
 
 const About = () => {
@@ -99,6 +101,11 @@ const About = () => {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {[
               {
+                icon: <SiNextdotjs className="text-2xl" />,
+                name: "Next.js",
+                color: "#ffffff",
+              },
+              {
                 icon: <FaReact className="text-2xl" />,
                 name: "React.js",
                 color: "#1f749a",
@@ -122,6 +129,11 @@ const About = () => {
                 icon: <SiMongodb className="text-2xl" />,
                 name: "MongoDB",
                 color: "#589636",
+              },             
+              {
+                icon: <SiVercel className="text-2xl" />,
+                name: "Vercel",
+                color: "#ffffff",
               },
               {
                 icon: <SiFirebase className="text-2xl" />,

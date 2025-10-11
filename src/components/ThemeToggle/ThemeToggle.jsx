@@ -1,9 +1,9 @@
-import { Moon, Sun } from 'lucide-react';
-import React, { useEffect, useState } from 'react';
-import { cn } from '../../lib/utils';
+import { Moon, Sun } from "lucide-react";
+import React, { useEffect, useState } from "react";
+import { cn } from "../../lib/utils";
 
 const ThemeToggle = () => {
-    const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme");
@@ -32,14 +32,14 @@ const ThemeToggle = () => {
     <button
       onClick={toggleTheme}
       className={cn(
-        "fixed max-sm:hidden top-5 right-5 z-50 p-2 rounded-full transition-colors duration-300",
-        "focus:outlin-hidden"
+        "text-foreground/80 hover:text-primary transition-colors duration-300 flex items-center justify-center text-lg font-medium"
       )}
+      aria-label="Toggle Theme"
     >
       {isDarkMode ? (
-        <Sun className="h-6 w-6 text-yellow-300" />
+        <Sun className="h-5 w-5 text-yellow-300 hover:scale-110 transition-transform" />
       ) : (
-        <Moon className="h-6 w-6 text-blue-900" />
+        <Moon className="h-5 w-5 text-slate-700 hover:scale-110 transition-transform" />
       )}
     </button>
   );
