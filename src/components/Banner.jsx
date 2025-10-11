@@ -46,7 +46,7 @@ const Banner = () => {
 
   const stats = [
     { value: 20, label: "Projects Completed", icon: <FaProjectDiagram /> },
-    { value: 400, label: "GitHub Commits", icon: <FaCode /> },
+    { value: 600, label: "GitHub Commits", icon: <FaCode /> },
     { value: 10, label: "Technologies", icon: <FaServer /> },
   ];
 
@@ -190,7 +190,7 @@ const Banner = () => {
               </div>
 
               {/* Social Links */}
-              <div className="flex gap-4">
+              <div className="flex gap-4 w-full">
                 <SocialCircleButton
                   icon={FaGithub}
                   url="https://github.com/Abusolaymansefat"

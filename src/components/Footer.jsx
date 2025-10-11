@@ -10,7 +10,6 @@ import {
 import SocialCircleButton from "./Button/SocialCircleButton";
 
 const Footer = () => {
-  
   const navLinks = [
     { name: "Home", href: "#hero" },
     { name: "About", href: "#about" },
@@ -22,7 +21,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-gray-300 py-12 px-6">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-        {/* Left: Logo & copyright */}
+        {/* Left: Logo */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -30,16 +29,14 @@ const Footer = () => {
           className="text-center md:text-left"
         >
           <a
-            className="text-xl font-bold text-primary flex items-center"
+            className="text-xl font-bold text-primary flex items-center justify-center md:justify-start"
             href="#hero"
           >
-            <span className="relative z-10">
-              <h1 className="font-extrabold text-white flex justify-center items-center select-text">
-                <span className="text-[#00ff94]">S</span>
-                <span className="text-[#38bdf8]">EF</span>
-                <span className="text-[#a855f7]">AT</span>
-              </h1>
-            </span>
+            <h1 className="font-extrabold text-white flex items-center select-text">
+              <span className="text-[#00ff94]">S</span>
+              <span className="text-[#38bdf8]">EF</span>
+              <span className="text-[#a855f7]">AT</span>
+            </h1>
           </a>
         </motion.div>
 
@@ -48,7 +45,7 @@ const Footer = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="flex gap-8"
+          className="flex flex-wrap justify-center gap-6 md:gap-8"
         >
           {navLinks.map(({ name, href }) => (
             <a
@@ -90,7 +87,9 @@ const Footer = () => {
           />
         </motion.div>
       </div>
-      <p className="mt-2 text-sm text-gray-400 select-text">
+
+      {/* Footer Bottom Text */}
+      <p className="mt-6 text-center text-sm text-gray-400 select-text">
         &copy; {new Date().getFullYear()} All rights reserved.
       </p>
     </footer>

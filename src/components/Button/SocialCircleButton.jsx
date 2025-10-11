@@ -1,6 +1,11 @@
 import React from "react";
 
-const SocialCircleButton = ({ icon: Icon, url, onClick, color = "bg-gray-800" }) => {
+const SocialCircleButton = ({
+  icon: Icon,
+  url,
+  onClick,
+  color = "bg-gray-800",
+}) => {
   const handleClick = (e) => {
     if (onClick) {
       e.preventDefault();
