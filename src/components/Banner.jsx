@@ -35,8 +35,8 @@ const Banner = () => {
 
   const handleDownloadCV = () => {
     const link = document.createElement("a");
-    link.href = "/Abu-solayman-Sefat-Full Stack Developer-Resume .pdf";
-    link.download = "Abu-solayman-Sefat-Full Stack Developer-Resume .pdf";
+    link.href = "/Abu-solayman-Sefat-Full Stack Developer-Resume.pdf";
+    link.download = "Abu-solayman-Sefat-Full Stack Developer-Resume.pdf";
     link.click();
   };
 

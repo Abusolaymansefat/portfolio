@@ -16,6 +16,41 @@ const Project = () => {
 
   const projects = [
     {
+      name: "EZI DROP (Team collaboration)",
+      description:
+        "Ezi Drop is a courier and delivery management platform that enables fast, secure, and real-time parcel delivery across Bangladesh. It automates rider assignment, route optimization, and shipment tracking for efficient logistics operations. ",
+      technologies: [
+        "NEXT.js",
+        "Next-auth",
+        "React",
+        "axios",
+        "Tailwind CSS",
+        "node.js",
+        "express.js",
+        "MongoDB",
+        "sslcommerz-lts",
+        "Stripe",
+        "Leaflet",
+        "Framer-motion",
+        "leaflet",
+        "JWT",
+      ],
+      challenges: [
+        "Role-Based Access Control:Allows users to have different permissions based on their roles, like user, member, and admin, with each role getting specific access to routes and features.",
+        "Secure Payments with Coupon System:Integrates Stripe for handling rent payments and lets members apply coupon codes to get percentage-based discounts before completing transactions.",
+        "Manage CRUD operation properly:Handles Create, Read, Update, and Delete operations across apartments, users, agreements, payments, coupons, and announcements using MongoDB.",
+        "Secure Authentication:Provides login and registration with email/password and Google, validates credentials, and uses JWT tokens for secure session management and route protection.",
+        "Comprehensive Dashboards: Delivers tailored dashboards for user, member, and admin roles with access to profile info, payment history, announcements, system stats, and content management.",
+      ],
+      liveLink: "https://app-orbit-d1fa9.web.app/",
+      githubLink: "https://github.com/Abusolaymansefat/eco-track-client",
+      images: [
+        "https://i.ibb.co.com/1JbYDfp0/Eco-Track-1.png",
+        "https://i.ibb.co.com/4RktYP7f/Eco-Track-2.png",
+        "https://i.ibb.co.com/HfWqxgcv/Eco-Track-3.png",
+      ],
+    },
+    {
       name: "Eco Track ",
       description:
         "The objective of this project is to provide a robust and user-friendly platform for managing building operations. Features include apartment listings, user agreements, secure payment processing, announcements, and role-based dashboards. Built with a modern tech stack, the application ensures a seamless and responsive user experience across all devices.",
