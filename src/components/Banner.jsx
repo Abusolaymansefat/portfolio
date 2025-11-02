@@ -47,7 +47,7 @@ const Banner = () => {
   const stats = [
     { value: 20, label: "Projects Completed", icon: <FaProjectDiagram /> },
     { value: 600, label: "GitHub Commits", icon: <FaCode /> },
-    { value: 10, label: "Technologies", icon: <FaServer /> },
+    { value: 14, label: "Technologies", icon: <FaServer /> },
   ];
 
   const techIcons = [FaReact, FaNodeJs, SiMongodb, SiTailwindcss];

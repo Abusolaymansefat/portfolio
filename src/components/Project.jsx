@@ -19,6 +19,13 @@ const Project = () => {
       name: "EZI DROP (Team collaboration)",
       description:
         "Ezi Drop is a courier and delivery management platform that enables fast, secure, and real-time parcel delivery across Bangladesh. It automates rider assignment, route optimization, and shipment tracking for efficient logistics operations. ",
+      "my-contrivuations": [
+        "Implemented a real-time tracking system using Leaflet, enabling users to track their shipments in real-time.",
+        "Implemented a secure payment system using stripe & sslcommerz.",
+        "Implemented a rider assignment system using real-time location tracking.",
+        "Implemented a route optimization system using Google Maps API.",
+        "Implemented a notification system using FCM. etc "
+      ],
       technologies: [
         "NEXT.js",
         "Next-auth",
@@ -36,18 +43,19 @@ const Project = () => {
         "JWT",
       ],
       challenges: [
-        "Role-Based Access Control:Allows users to have different permissions based on their roles, like user, member, and admin, with each role getting specific access to routes and features.",
+        "Role-Based Access Control:Allows users to have different permissions based on their roles, like user, Rider, admin and Distict agents roles with each role getting specific access to routes and features.",
         "Secure Payments with Coupon System:Integrates Stripe for handling rent payments and lets members apply coupon codes to get percentage-based discounts before completing transactions.",
         "Manage CRUD operation properly:Handles Create, Read, Update, and Delete operations across apartments, users, agreements, payments, coupons, and announcements using MongoDB.",
         "Secure Authentication:Provides login and registration with email/password and Google, validates credentials, and uses JWT tokens for secure session management and route protection.",
-        "Comprehensive Dashboards: Delivers tailored dashboards for user, member, and admin roles with access to profile info, payment history, announcements, system stats, and content management.",
+        "Comprehensive Dashboards: Delivers tailored dashboards for user, Rider, admin and Distict agents roles with access to profile info, payment history, announcements, system stats, and content management.",
       ],
-      liveLink: "https://app-orbit-d1fa9.web.app/",
-      githubLink: "https://github.com/Abusolaymansefat/eco-track-client",
+      liveLink: "https://ezi-drop.vercel.app/",
+      githubLink: "https://github.com/mahbub-alam-dave/ezi-drop",
       images: [
-        "https://i.ibb.co.com/1JbYDfp0/Eco-Track-1.png",
-        "https://i.ibb.co.com/4RktYP7f/Eco-Track-2.png",
-        "https://i.ibb.co.com/HfWqxgcv/Eco-Track-3.png",
+        "https://i.ibb.co.com/WvkzmTZD/Homepng.png",
+        "https://i.ibb.co.com/ccTv0x43/user.png",
+        "https://i.ibb.co.com/WpNLSdvZ/Screenshot-2025-11-02-203933.png",
+        "https://i.ibb.co.com/CK1dXM8Q/Screenshot-2025-11-02-204257.png"
       ],
     },
     {
@@ -127,6 +135,7 @@ const Project = () => {
         "JWT",
       ],
       challenges: [
+        "Comprehensive Dashboards: Delivers tailored dashboards for user, Rider, admin and Distict agents roles with access to profile info, payment history, announcements, system stats, and content management.",
         "Developed and deployed a product delivery & parcel management system with seamless booking, tracking, and delivery status updates.",
         "mplemented parcel add & delivery features to manage logistics efficiently.",
         "Handling JWT authentication properly to manage the authentic registered and non-registered user",
@@ -185,11 +194,10 @@ const Project = () => {
               <button
                 key={index}
                 onClick={() => setActiveProject(index)}
-                className={`px-4 sm:px-6 md:px-8 py-2 md:py-3 rounded-full text-sm sm:text-base md:text-lg font-medium transition-all ${
-                  activeProject === index
-                    ? "bg-primary text-gray-900"
-                    : "text-gray-300 hover:text-white"
-                }`}
+                className={`px-4 sm:px-6 md:px-8 py-2 md:py-3 rounded-full text-sm sm:text-base md:text-lg font-medium transition-all ${activeProject === index
+                  ? "bg-primary text-gray-900"
+                  : "text-gray-300 hover:text-white"
+                  }`}
                 style={{
                   backgroundColor:
                     activeProject === index ? primaryColor : "transparent",
@@ -232,9 +240,8 @@ const Project = () => {
                   <div className="w-full h-full bg-gray-800 relative">
                     <img
                       src={image}
-                      alt={`${projects[activeProject].name} screenshot ${
-                        index + 1
-                      }`}
+                      alt={`${projects[activeProject].name} screenshot ${index + 1
+                        }`}
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4 md:p-6 lg:p-8">
@@ -414,7 +421,7 @@ const Project = () => {
           transition={{ duration: 2, repeat: Infinity }}
           style={{ color: primaryColor }}
           className="flex flex-col items-center cursor-pointer mt-6"
-          onClick={() => document.getElementById("contact")?.scrollIntoView()}
+          onClick={() => document.getElementById("Skills")?.scrollIntoView()}
         >
           <FaArrowDown className="text-2xl" />
         </motion.div>
