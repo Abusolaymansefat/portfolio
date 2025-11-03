@@ -16,7 +16,7 @@ const Project = () => {
 
   const projects = [
     {
-      name: "EZI DROP (Team collaboration)",
+      name: "EZI DROP (Team project)",
       description:
         "Ezi Drop is a courier and delivery management platform that enables fast, secure, and real-time parcel delivery across Bangladesh. It automates rider assignment, route optimization, and shipment tracking for efficient logistics operations. ",
       "my-contrivuations": [
@@ -319,6 +319,41 @@ const Project = () => {
               </div>
             </motion.div>
 
+
+            {/* My Contributions */}
+            {projects[activeProject]["my-contrivuations"] && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.45 }}
+              >
+                <h4 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3 md:mb-4"
+                  style={{ color: primaryColor }}
+                >
+                  My Contributions
+                </h4>
+                <ul className="space-y-2 sm:space-y-3">
+                  {projects[activeProject]["my-contrivuations"].map((item, index) => (
+                    <motion.li
+                      key={index}
+                      className="flex items-start"
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.45 + index * 0.1 }}
+                    >
+                      <span className="text-primary text-xl sm:text-2xl mr-2 sm:mr-3">
+                        •
+                      </span>
+                      <span className="text-base sm:text-lg md:text-xl text-gray-400">
+                        {item}
+                      </span>
+                    </motion.li>
+                  ))}
+                </ul>
+              </motion.div>
+            )}
+
+
             {/* Challenges */}
             <motion.div
               initial={{ opacity: 0 }}
@@ -421,7 +456,7 @@ const Project = () => {
           transition={{ duration: 2, repeat: Infinity }}
           style={{ color: primaryColor }}
           className="flex flex-col items-center cursor-pointer mt-6"
-          onClick={() => document.getElementById("Skills")?.scrollIntoView()}
+          onClick={() => document.getElementById("skills")?.scrollIntoView()}
         >
           <FaArrowDown className="text-2xl" />
         </motion.div>

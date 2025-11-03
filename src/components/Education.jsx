@@ -131,7 +131,7 @@ const Education = () => {
           style={{ color: primaryColor }}
           className="flex flex-col items-center cursor-pointer"
           onClick={() =>
-            document.getElementById("Contact")?.scrollIntoView({ behavior: "smooth" })
+            document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
           }
         >
           <FaArrowDown className="text-2xl" />

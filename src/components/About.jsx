@@ -1,7 +1,7 @@
 import React from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
-import profileImage from "../assets/sefat.jpg";
+import profileImage from "../assets/Abu solayman.png";
 import { FaArrowDown, FaNodeJs, FaReact } from "react-icons/fa";
 import {
   SiExpress,
@@ -159,7 +159,7 @@ const About = () => {
           transition={{ duration: 2, repeat: Infinity }}
           style={{ color: primaryColor }}
           className="flex flex-col items-center cursor-pointer mt-6"
-          onClick={() => document.getElementById("skills")?.scrollIntoView()}
+          onClick={() => document.getElementById("projects")?.scrollIntoView()}
         >
           <FaArrowDown className="text-2xl" />
         </motion.div>

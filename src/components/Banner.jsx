@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useNavigate } from "react-router";
-import profileImage from "../assets/sefat.jpg";
+import profileImage from "../assets/Abu solayman.png";
 import {
   FaProjectDiagram,
   FaCode,
