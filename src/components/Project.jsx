@@ -458,6 +458,7 @@ const Project = () => {
           className="flex flex-col items-center cursor-pointer mt-6"
           onClick={() => document.getElementById("skills")?.scrollIntoView()}
         >
+
           <FaArrowDown className="text-2xl" />
         </motion.div>
       </div>

@@ -35,8 +35,8 @@ const Banner = () => {
 
   const handleDownloadCV = () => {
     const link = document.createElement("a");
-    link.href = "/Abu-solayman-Sefat-Full Stack Developer-Resume.pdf";
-    link.download = "Abu-solayman-Sefat-Full Stack Developer-Resume.pdf";
+    link.href = "/Abu Solayman Sefat- Frontend Developer-Resume.pdf";
+    link.download = "Abu Solayman Sefat- Frontend Developer-Resume.pdf";
     link.click();
   };
 
@@ -133,7 +133,7 @@ const Banner = () => {
               >
                 <Typewriter
                   options={{
-                    strings: ["Full Stack Developer", "Problem Solver"],
+                    strings: ["Full Stack Developer", "Frontend Developer", "Problem Solver"],
                     autoStart: true,
                     loop: true,
                     delay: 50,

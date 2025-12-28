@@ -72,7 +72,7 @@ const About = () => {
           <span className="text-[#1e99af]">
             Shymoli Ideal Engineering College
           </span>
-          , Chittagong and a passionate MERN stack developer. I love crafting
+          , Chittagong and a passionate Frontend developer. I love crafting
           clean, efficient, and scalable web applications that provide seamless
           user experiences.
         </motion.p>
@@ -129,7 +129,7 @@ const About = () => {
                 icon: <SiMongodb className="text-2xl" />,
                 name: "MongoDB",
                 color: "#589636",
-              },             
+              },
               {
                 icon: <SiVercel className="text-2xl" />,
                 name: "Vercel",
