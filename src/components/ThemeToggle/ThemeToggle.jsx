@@ -1,46 +1,50 @@
-import { Moon, Sun } from "lucide-react";
 import React, { useEffect, useState } from "react";
-import { cn } from "../../lib/utils";
+import { Sun, Moon } from "lucide-react";
 
 const ThemeToggle = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [theme, setTheme] = useState("dark");
 
   useEffect(() => {
-    const storedTheme = localStorage.getItem("theme");
-    if (storedTheme === "dark") {
-      setIsDarkMode(true);
+    const savedTheme = localStorage.getItem("theme") || "dark";
+
+    setTheme(savedTheme);
+
+    if (savedTheme === "dark") {
       document.documentElement.classList.add("dark");
     } else {
-      localStorage.setItem("theme", "light");
-      setIsDarkMode(false);
+      document.documentElement.classList.remove("dark");
     }
   }, []);
 
   const toggleTheme = () => {
-    if (isDarkMode) {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-      setIsDarkMode(false);
-    } else {
+    const newTheme = theme === "dark" ? "light" : "dark";
+
+    setTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
+
+    if (newTheme === "dark") {
       document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-      setIsDarkMode(true);
+    } else {
+      document.documentElement.classList.remove("dark");
     }
   };
 
   return (
     <button
       onClick={toggleTheme}
-      className={cn(
-        "text-foreground/80 hover:text-primary transition-colors duration-300 flex items-center justify-center text-lg font-medium"
-      )}
-      aria-label="Toggle Theme"
+      className="relative flex items-center justify-center w-12 h-6 rounded-full bg-gray-700 dark:bg-gray-600 transition"
     >
-      {isDarkMode ? (
-        <Sun className="h-5 w-5 text-yellow-300 hover:scale-110 transition-transform" />
-      ) : (
-        <Moon className="h-5 w-5 text-slate-700 hover:scale-110 transition-transform" />
-      )}
+      {/* toggle circle */}
+      <span
+        className={`absolute left-1 top-1 w-4 h-4 rounded-full bg-white flex items-center justify-center transition-transform duration-300
+        ${theme === "dark" ? "translate-x-6" : "translate-x-0"}`}
+      >
+        {theme === "dark" ? (
+          <Moon size={12} className="text-black" />
+        ) : (
+          <Sun size={12} className="text-yellow-500" />
+        )}
+      </span>
     </button>
   );
 };

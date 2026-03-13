@@ -14,156 +14,148 @@ import {
 
 const About = () => {
   const primaryColor = "#00fffb";
+  const secondaryColor = "#00D1FF";
 
   const item = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 30 },
     show: { opacity: 1, y: 0 },
   };
+
+  const techStack = [
+    { icon: <SiNextdotjs />, name: "Next.js", color: "#ffffff" },
+    { icon: <FaReact />, name: "React.js", color: "#61dafb" },
+    { icon: <SiTailwindcss />, name: "Tailwind", color: "#38bdf8" },
+    { icon: <FaNodeJs />, name: "Node.js", color: "#68a063" },
+    { icon: <SiExpress />, name: "Express.js", color: "#ffffff" },
+    { icon: <SiMongodb />, name: "MongoDB", color: "#4db33d" },
+    { icon: <SiVercel />, name: "Vercel", color: "#ffffff" },
+    { icon: <SiFirebase />, name: "Firebase", color: "#ffca28" },
+  ];
 
   return (
     <section
       id="about"
-      className="min-h-screen flex flex-col md:flex-row items-center px-6 py-20 gap-12
-                 bg-gray-950 text-white transition-colors duration-300"
+      className="bg-gray-950 text-white py-24 px-6 min-h-screen flex items-center"
     >
-      {/* Profile Image */}
-      <motion.div
-        initial={{ opacity: 0, x: -50 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="flex-shrink-0 w-64 h-64 rounded-full overflow-hidden border-4 border-[#00fffb] shadow-xl"
-      >
-        <img
-          src={profileImage}
-          alt="Abu Solayman Sefat"
-          className="w-full h-full object-cover"
-        />
-      </motion.div>
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-14">
 
-      {/* Content */}
-      <motion.div
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-        variants={{
-          hidden: {},
-          show: {
-            transition: {
-              staggerChildren: 0.1,
-            },
-          },
-        }}
-        className="flex flex-col justify-center max-w-xl w-full gap-6"
-      >
-        <motion.h1
-          initial={{ opacity: 0, y: -20 }}
-          variants={item}
-          className="text-6xl font-extrabold text-[#00fffb]"
-        >
-          About Me
-        </motion.h1>
-
-        <motion.p variants={item} className="leading-relaxed text-lg text-gray-300">
-          Hi! I'm <span className="text-[#00ff94]">Abu</span>
-          <span className="text-[#38bdf8]">Solayman</span>
-          <span className="text-[#a855f7]">Sefat,</span> an Electrical and
-          Electronic Engineering student from{" "}
-          <span className="text-[#1e99af]">
-            Shymoli Ideal Engineering College
-          </span>
-          , Chittagong and a passionate Frontend developer. I love crafting
-          clean, efficient, and scalable web applications that provide seamless
-          user experiences.
-        </motion.p>
-
-        <motion.p variants={item} className="leading-relaxed text-lg text-gray-300">
-          I'm passionate about creating elegant solutions to complex problems,
-          and I'm constantly learning new technologies and techniques to stay at
-          the forefront of the ever-evolving web landscape.
-        </motion.p>
-
-        <motion.p variants={item} className="leading-relaxed text-lg text-gray-300">
-          I am passionate about creating innovative digital solutions that blend
-          clean code with creative design. My goal is to work as a Full-Stack
-          Web Developer and contribute to impactful tech solutions while
-          continuously learning and growing.
-        </motion.p>
-
-        {/* Tech Stack Card - like Contact's card style */}
+        {/* Profile Image */}
         <motion.div
-          variants={item}
-          className="bg-gray-800/40 p-6 rounded-2xl border border-gray-700 backdrop-blur-sm shadow-lg"
+          initial={{ opacity: 0, x: -60 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="w-64 h-64 rounded-full overflow-hidden border-4 shadow-xl"
+          style={{ borderColor: primaryColor }}
         >
-          <h3 className="text-2xl font-semibold text-[#00fffb] mb-4 flex items-center">
-            🚀 <span className="ml-2">Tech Stack</span>
-          </h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {[
-              {
-                icon: <SiNextdotjs className="text-2xl" />,
-                name: "Next.js",
-                color: "#ffffff",
-              },
-              {
-                icon: <FaReact className="text-2xl" />,
-                name: "React.js",
-                color: "#1f749a",
-              },
-              {
-                icon: <SiTailwindcss className="text-2xl" />,
-                name: "Tailwind",
-                color: "#38bdf8",
-              },
-              {
-                icon: <FaNodeJs className="text-2xl" />,
-                name: "Node.js",
-                color: "#68a063",
-              },
-              {
-                icon: <SiExpress className="text-2xl" />,
-                name: "Express",
-                color: "#ffffff",
-              },
-              {
-                icon: <SiMongodb className="text-2xl" />,
-                name: "MongoDB",
-                color: "#589636",
-              },
-              {
-                icon: <SiVercel className="text-2xl" />,
-                name: "Vercel",
-                color: "#ffffff",
-              },
-              {
-                icon: <SiFirebase className="text-2xl" />,
-                name: "Firebase",
-                color: "#ffca28",
-              },
-            ].map((tech, i) => (
-              <motion.div
-                key={i}
-                whileHover={{ y: -5, scale: 1.05 }}
-                className="flex items-center gap-3 p-3 rounded-lg bg-gray-700/50 hover:bg-gray-600 transition-all cursor-pointer"
-              >
-                <div style={{ color: tech.color }}>{tech.icon}</div>
-                <span className="text-gray-300">{tech.name}</span>
-              </motion.div>
-            ))}
-          </div>
+          <img
+            src={profileImage}
+            alt="Abu Solayman Sefat"
+            className="w-full h-full object-cover"
+          />
         </motion.div>
 
-        {/* Scroll down arrow */}
+        {/* Content */}
         <motion.div
-          animate={{ y: [0, 15, 0], opacity: [0.6, 1, 0.6] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          style={{ color: primaryColor }}
-          className="flex flex-col items-center cursor-pointer mt-6"
-          onClick={() => document.getElementById("projects")?.scrollIntoView()}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          variants={{
+            hidden: {},
+            show: { transition: { staggerChildren: 0.15 } },
+          }}
+          className="flex flex-col max-w-xl gap-6"
         >
-          <FaArrowDown className="text-2xl" />
+          {/* Title */}
+          <motion.h1
+            variants={item}
+            className="text-5xl md:text-6xl font-bold"
+            style={{ color: primaryColor }}
+          >
+            About Me
+          </motion.h1>
+
+          {/* Description */}
+          <motion.p variants={item} className="text-gray-300 text-lg leading-relaxed">
+            Hi! I'm{" "}
+            <span className="text-green-400 font-semibold">Abu Solayman Sefat</span>,
+            an Electrical and Electronic Engineering student from{" "}
+            <span className="text-sky-400 font-semibold">
+              Shymoli Ideal Engineering College
+            </span>
+            , Chittagong and a passionate Frontend developer.
+          </motion.p>
+
+          <motion.p variants={item} className="text-gray-300 text-lg leading-relaxed">
+            I enjoy building clean, scalable, and user-friendly web applications.
+            My focus is on creating modern interfaces that provide smooth user
+            experiences.
+          </motion.p>
+
+          <motion.p variants={item} className="text-gray-300 text-lg leading-relaxed">
+            My goal is to work as a{" "}
+            <span style={{ color: secondaryColor }} className="font-semibold">
+              Full-Stack Web Developer
+            </span>{" "}
+            and contribute to impactful tech solutions while continuously learning
+            new technologies.
+          </motion.p>
+
+          {/* Tech Stack */}
+          <motion.div
+            variants={item}
+            className="bg-gray-900/60 border border-gray-700 p-6 rounded-2xl backdrop-blur-lg shadow-lg"
+          >
+            <h3
+              className="text-2xl font-semibold mb-5"
+              style={{ color: secondaryColor }}
+            >
+              🚀 Tech Stack
+            </h3>
+
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              {techStack.map((tech, i) => (
+                <motion.div
+                  key={i}
+                  whileHover={{ y: -6, scale: 1.05 }}
+                  className="flex items-center gap-3 bg-gray-800 p-3 rounded-lg hover:bg-gray-700 transition"
+                >
+                  <div className="text-2xl" style={{ color: tech.color }}>
+                    {tech.icon}
+                  </div>
+                  <span className="text-gray-300 text-sm">{tech.name}</span>
+                </motion.div>
+              ))}
+            </div>
+
+          </motion.div>
+
+          {/* Scroll Indicator */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.5 }}
+            className="mt-12 lg:mt-20 flex justify-center"
+          >
+            <motion.div
+              animate={{
+                y: [0, 15, 0],
+                opacity: [0.6, 1, 0.6],
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+              }}
+              style={{ color: primaryColor }}
+              className="flex flex-col items-center cursor-pointer"
+              onClick={() => document.getElementById("projects")?.scrollIntoView()}
+            >
+              <FaArrowDown className="text-2xl" />
+            </motion.div>
+          </motion.div>
         </motion.div>
-      </motion.div>
+
+      </div>
     </section>
   );
 };

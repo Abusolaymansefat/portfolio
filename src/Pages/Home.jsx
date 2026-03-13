@@ -11,22 +11,22 @@ import Footer from "../components/Footer";
 
 const Home = () => {
   return (
-    <div className="min-h-screen overflow-x-hidden">
+    <div className="min-h-screen overflow-x-hidden bg-white dark:bg-gray-950 text-black dark:text-white transition-colors duration-500">
       {/* Background Effects */}
       <StarBackground />
 
       {/* navbar */}
-      <Navbar/>
+      <Navbar />
       {/* main content */}
-      <Banner/>
-      <About/>
-      <Project/>
-      <Skill/>
-      <Education/>
-      <Contact/>
+      <Banner />
+      <About />
+      <Project />
+      <Skill />
+      <Education />
+      <Contact />
 
       {/* Footer */}
-      <Footer/>
+      <Footer />
     </div>
   );
 };
