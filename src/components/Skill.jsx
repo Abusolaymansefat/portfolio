@@ -17,6 +17,12 @@ import {
   SiAuth0,
   SiRender,
   SiNextdotjs,
+  SiTypescript,
+  SiPrisma,
+  SiPostman,
+  SiRedux,
+  SiPostgresql,
+  SiMysql,
 } from "react-icons/si";
 
 const Skill = () => {
@@ -31,6 +37,7 @@ const Skill = () => {
         { name: "HTML5", icon: <SiHtml5 />, level: 90 },
         { name: "CSS3", icon: <SiCss3 />, level: 85 },
         { name: "JavaScript", icon: <SiJavascript />, level: 80 },
+        { name: "TypeScript", icon: <SiTypescript />, level: 75 },
         { name: "React", icon: <FaReact />, level: 70 },
         { name: "Next.js", icon: <SiNextdotjs />, level: 50 },
         { name: "Tailwind CSS", icon: <RiTailwindCssFill />, level: 90 },
@@ -43,6 +50,7 @@ const Skill = () => {
       skills: [
         { name: "Node.js", icon: <FaNodeJs />, level: 70 },
         { name: "Express", icon: <SiExpress />, level: 60 },
+        { name: "Prisma", icon: <SiPrisma />, level: 70 },
         { name: "REST APIs", level: 95 },
         { name: "Authentication", icon: <SiAuth0 />, level: 90 },
         { name: "JWT", level: 70 },
@@ -53,7 +61,10 @@ const Skill = () => {
       icon: <FaDatabase />,
       skills: [
         { name: "MongoDB", icon: <SiMongodb />, level: 80 },
+        { name: "PostgreSQL", icon: <SiPostgresql />, level: 75 },
+        { name: "MySQL", icon: <SiMysql />, level: 70 },
         { name: "Firebase", icon: <SiFirebase />, level: 80 },
+        { name: "Postman", icon: <SiPostman />, level: 85 },
       ],
     },
     {
@@ -61,6 +72,7 @@ const Skill = () => {
       icon: <SiDocker />,
       skills: [
         { name: "Git", icon: <SiGit />, level: 90 },
+        { name: "Redux Toolkit", icon: <SiRedux />, level: 70 },
         { name: "Vercel", icon: <IoLogoVercel />, level: 80 },
         { name: "Render", icon: <SiRender />, level: 75 },
       ],
@@ -68,15 +80,15 @@ const Skill = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 px-4 bg-gray-950">
-      <div className="max-w-6xl mx-auto">
+    <section id="skills" className="py-8 px-4 bg-slate-50 text-slate-900 transition-colors duration-300 dark:bg-gray-950 dark:text-white">
+      <div className="max-w-7xl mx-auto">
         {/* Animated Header */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.2 }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
           <motion.h2
             className="text-4xl font-bold mb-4"
@@ -94,8 +106,7 @@ const Skill = () => {
             />
           </motion.h2>
           <motion.p
-            className="text-lg"
-            style={{ color: grayColor }}
+            className="text-lg text-slate-600 dark:text-gray-400"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -106,7 +117,7 @@ const Skill = () => {
         </motion.div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
           {skillCategories.map((category, index) => (
             <motion.div
               key={index}
@@ -118,10 +129,10 @@ const Skill = () => {
                 y: -5,
                 boxShadow: `0 30px 30px -10px ${primaryColor}20`,
               }}
-              className="bg-gray-900/50 rounded-xl border border-gray-800 overflow-hidden"
+              className="bg-white/90 rounded-2xl border border-slate-200 overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 dark:bg-gray-900/70 dark:border-gray-800"
             >
               {/* Category Header */}
-              <div className="p-5 border-b border-gray-800 flex items-center gap-3">
+              <div className="p-5 border-b border-slate-200 flex items-center gap-3 dark:border-gray-800">
                 <motion.div
                   className="w-10 h-10 rounded-lg flex items-center justify-center"
                   style={{ backgroundColor: `${primaryColor}20` }}
@@ -132,7 +143,7 @@ const Skill = () => {
                     style: { color: primaryColor },
                   })}
                 </motion.div>
-                <h3 className="text-xl font-semibold text-white">
+                <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
                   {category.title}
                 </h3>
               </div>
@@ -162,7 +173,7 @@ const Skill = () => {
                       </motion.div>
                       <div className="flex-1">
                         <div className="flex justify-between items-center mb-1">
-                          <span className="text-gray-300 text-sm font-medium">
+                          <span className="text-slate-700 text-sm font-medium dark:text-gray-300">
                             {skill.name}
                           </span>
                           <span
@@ -172,7 +183,7 @@ const Skill = () => {
                             {skill.level}%
                           </span>
                         </div>
-                        <div className="w-full bg-gray-800 rounded-full h-1.5 overflow-hidden">
+                        <div className="w-full bg-slate-200 rounded-full h-1.5 overflow-hidden dark:bg-gray-800">
                           <motion.div
                             initial={{ width: 0 }}
                             whileInView={{ width: `${skill.level}%` }}
@@ -200,7 +211,7 @@ const Skill = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 1 }}
-          className="mt-16 text-center"
+          className="mt-6 text-center"
         >
           <motion.div
             animate={{

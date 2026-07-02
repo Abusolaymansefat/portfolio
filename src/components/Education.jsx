@@ -26,13 +26,13 @@ const Education = () => {
   return (
     <section
       id="education"
-      className="min-h-screen py-20 px-6 bg-gray-900 text-gray-100 transition-colors duration-300"
+      className="min-h-screen py-5 px-6 bg-slate-50 text-slate-900 transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100"
       style={{ scrollMarginTop: "70px" }}
     >
       <div className="container mx-auto max-w-4xl">
         {/* Header */}
         <h2
-          className="text-3xl font-bold mb-12 text-center flex items-center justify-center gap-2"
+          className="text-3xl font-bold mb-4 text-center flex items-center justify-center gap-2"
           style={{ color: primaryColor }}
         >
           <FaGraduationCap />
@@ -44,7 +44,7 @@ const Education = () => {
           {educationData.map((edu, index) => (
             <motion.div
               key={index}
-              className="mb-10 ml-6 relative"
+              className="mb-4 ml-4 relative"
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -63,7 +63,7 @@ const Education = () => {
                   opacity: 1,
                 }}
                 transition={{ type: "spring", stiffness: 200 }}
-                className="relative p-6 bg-gray-800/70 backdrop-blur-md rounded-lg shadow-lg cursor-pointer overflow-hidden group"
+                className="relative p-3 bg-white/80 border border-slate-200 backdrop-blur-md rounded-lg shadow-lg cursor-pointer overflow-hidden group dark:bg-gray-800/70 dark:border-gray-700"
               >
                 {/* Fade overlay effect */}
                 <motion.div
@@ -79,11 +79,11 @@ const Education = () => {
                 >
                   {edu.degree}
                 </h3>
-                <p className="text-sm text-gray-300 relative z-10">
+                <p className="text-sm text-slate-600 relative z-10 dark:text-gray-300">
                   {edu.institution}
                 </p>
 
-                <p className="mt-2 leading-relaxed text-gray-200 relative z-10">
+                <p className="mt-2 leading-relaxed text-slate-700 relative z-10 dark:text-gray-200">
                   <span className="font-semibold">Board:</span> {edu.board}
                   <br />
                   <span className="font-semibold">Group:</span> {edu.group}
@@ -92,7 +92,7 @@ const Education = () => {
                 </p>
 
                 {/* Animated underline progress bar */}
-                <div className="w-full bg-gray-700 rounded-full h-1.5 mt-4 overflow-hidden relative z-10">
+                <div className="w-full bg-slate-200 rounded-full h-1.5 mt-4 overflow-hidden relative z-10 dark:bg-gray-700">
                   <motion.div
                     initial={{ width: 0 }}
                     whileInView={{ width: "100%" }}
@@ -117,7 +117,7 @@ const Education = () => {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ delay: 1 }}
-        className="mt-16 text-center"
+        className="text-center"
       >
         <motion.div
           animate={{

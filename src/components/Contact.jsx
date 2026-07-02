@@ -93,7 +93,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-4 bg-gray-950">
+    <section id="contact" className="py-5 px-4 bg-slate-50 transition-colors duration-300 dark:bg-gray-950">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <motion.div
@@ -105,7 +105,7 @@ const Contact = () => {
           <h2 className="text-4xl font-bold mb-4 text-[#00fffb]">
             Let's Connect
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-slate-600 max-w-2xl mx-auto dark:text-gray-400">
             Have a project in mind or want to discuss opportunities? Reach out
             through any of these channels.
           </p>
@@ -117,7 +117,7 @@ const Contact = () => {
             {contactItems.map((item, index) => (
               <motion.div
                 key={index}
-                className="relative p-6 rounded-xl bg-gray-800/50 border border-gray-700 overflow-hidden group"
+                className="relative p-6 rounded-xl bg-white/80 border border-slate-200 overflow-hidden group shadow-sm dark:bg-gray-800/50 dark:border-gray-700"
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.15 }}
@@ -170,7 +170,7 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-300 mb-1">
+                    <h3 className="text-lg font-semibold text-slate-800 mb-1 dark:text-gray-300">
                       {item.title}
                     </h3>
                     {item.link ? (
@@ -178,7 +178,7 @@ const Contact = () => {
                         href={item.link}
                         target={item.isExternal ? "_blank" : "_self"}
                         rel="noopener noreferrer"
-                        className="text-gray-400 group-hover:text-white transition-colors hover:underline flex items-center gap-1"
+                        className="text-slate-600 group-hover:text-slate-900 transition-colors hover:underline flex items-center gap-1 dark:text-gray-400 dark:group-hover:text-white"
                       >
                         {item.value}
                         {item.isExternal && (
@@ -186,7 +186,7 @@ const Contact = () => {
                         )}
                       </a>
                     ) : (
-                      <p className="text-gray-400 group-hover:text-white transition-colors">
+                      <p className="text-slate-600 group-hover:text-slate-900 transition-colors dark:text-gray-400 dark:group-hover:text-white">
                         {item.value}
                       </p>
                     )}
@@ -201,7 +201,7 @@ const Contact = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="relative p-8 rounded-2xl bg-gray-900 border border-gray-800 shadow-xl"
+            className="relative p-8 rounded-2xl bg-white border border-slate-200 shadow-xl dark:bg-gray-900 dark:border-gray-800"
           >
             <div className="absolute inset-0 rounded-2xl overflow-hidden">
               <motion.div
@@ -229,7 +229,7 @@ const Contact = () => {
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-gray-400 mb-2">
+                  <label htmlFor="name" className="block text-slate-600 mb-2 dark:text-gray-400">
                     Your Name
                   </label>
                   <input
@@ -239,12 +239,12 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-[#00ff94] focus:ring-2 focus:ring-[#00ff94]/50 outline-none transition-all text-white"
+                    className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-300 focus:border-[#00ff94] focus:ring-2 focus:ring-[#00ff94]/50 outline-none transition-all text-slate-900 dark:bg-gray-800 dark:border-gray-700 dark:text-white"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-gray-400 mb-2">
+                  <label htmlFor="email" className="block text-slate-600 mb-2 dark:text-gray-400">
                     Your Email
                   </label>
                   <input
@@ -254,12 +254,12 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-[#00d1ff] focus:ring-2 focus:ring-[#00d1ff]/50 outline-none transition-all text-white"
+                    className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-300 focus:border-[#00d1ff] focus:ring-2 focus:ring-[#00d1ff]/50 outline-none transition-all text-slate-900 dark:bg-gray-800 dark:border-gray-700 dark:text-white"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-gray-400 mb-2">
+                  <label htmlFor="subject" className="block text-slate-600 mb-2 dark:text-gray-400">
                     Subject
                   </label>
                   <input
@@ -269,12 +269,12 @@ const Contact = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-[#00d1ff] focus:ring-2 focus:ring-[#00d1ff]/50 outline-none transition-all text-white"
+                    className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-300 focus:border-[#00d1ff] focus:ring-2 focus:ring-[#00d1ff]/50 outline-none transition-all text-slate-900 dark:bg-gray-800 dark:border-gray-700 dark:text-white"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-gray-400 mb-2">
+                  <label htmlFor="message" className="block text-slate-600 mb-2 dark:text-gray-400">
                     Your Message
                   </label>
                   <textarea
@@ -284,18 +284,17 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-[#a855f7] focus:ring-2 focus:ring-[#a855f7]/50 outline-none transition-all text-white"
+                    className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-300 focus:border-[#a855f7] focus:ring-2 focus:ring-[#a855f7]/50 outline-none transition-all text-slate-900 dark:bg-gray-800 dark:border-gray-700 dark:text-white"
                   />
                 </div>
 
                 <motion.button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-bold transition-all ${
-                    isSubmitting
-                      ? "bg-gray-700 cursor-not-allowed"
-                      : "bg-[#96e2e1] hover:bg-[#00fffb] text-gray-900"
-                  }`}
+                  className={`w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-bold transition-all ${isSubmitting
+                    ? "bg-gray-700 cursor-not-allowed"
+                    : "bg-[#96e2e1] hover:bg-[#00fffb] text-gray-900"
+                    }`}
                   whileHover={!isSubmitting ? { scale: 1.02 } : {}}
                   whileTap={!isSubmitting ? { scale: 0.98 } : {}}
                 >

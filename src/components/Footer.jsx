@@ -19,7 +19,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-gray-300 py-12">
+    <footer className="bg-slate-100 text-slate-700 py-5 transition-colors duration-300 dark:bg-gray-900 dark:text-gray-300">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
         {/* Left: Logo */}
         <motion.div
@@ -32,7 +32,7 @@ const Footer = () => {
             className="text-xl font-bold text-primary flex items-center justify-center md:justify-start"
             href="#hero"
           >
-            <h1 className="font-extrabold text-white flex items-center select-text">
+            <h1 className="font-extrabold text-slate-900 flex items-center select-text dark:text-white">
               <span className="text-[#00ff94]">S</span>
               <span className="text-[#38bdf8]">EF</span>
               <span className="text-[#a855f7]">AT</span>
@@ -89,7 +89,7 @@ const Footer = () => {
       </div>
 
       {/* Footer Bottom Text */}
-      <p className="mt-6 text-center text-sm text-gray-400 select-text">
+      <p className="mt-6 text-center text-sm text-slate-500 select-text dark:text-gray-400">
         &copy; {new Date().getFullYear()} All rights reserved.
       </p>
     </footer>

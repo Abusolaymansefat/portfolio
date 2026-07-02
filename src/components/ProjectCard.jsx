@@ -3,10 +3,10 @@ import { Link } from "react-router";
 
 const ProjectCard = ({ project, primaryColor, secondaryColor }) => {
           return (
-                    <div className="bg-gray-900 rounded-xl overflow-hidden shadow-lg flex flex-col md:flex-row">
+                    <div className="bg-slate-50 text-slate-900 dark:bg-gray-950 dark:text-gray-100 border border-border rounded-xl overflow-hidden shadow-lg flex flex-col md:flex-row">
 
                               {/* Left side - Image */}
-                              <div className="md:w-1/2 h-64 md:h-auto bg-gray-800 flex items-center justify-center">
+                              <div className="md:w-1/2 h-64 md:h-auto bg-card flex items-center justify-center">
                                         <img
                                                   src={project.images[0]}
                                                   alt={project.name}
@@ -15,12 +15,12 @@ const ProjectCard = ({ project, primaryColor, secondaryColor }) => {
                               </div>
 
                               {/* Right side - Details */}
-                              <div className="md:w-1/2 p-6 flex flex-col justify-between">
+                              <div className="md:w-1/2 p-6 flex flex-col justify-between text-white">
                                         <div>
                                                   <h3 className="text-2xl font-bold mb-2" style={{ color: primaryColor }}>
                                                             {project.name}
                                                   </h3>
-                                                  <p className="text-gray-300 mb-4">{project.description}</p>
+                                                  <p className="text-white mb-4">{project.description}</p>
 
                                                   {/* Technologies */}
                                                   <div className="flex flex-wrap gap-2 mb-4">

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "../../lib/utils";
-// import ThemeToggle from '../ThemeToggle/ThemeToggle';
+import ThemeToggle from "../ThemeToggle/ThemeToggle";
 
 const navItems = [
   { name: "Home", href: "#hero" },
@@ -28,9 +28,9 @@ const Navbar = () => {
   return (
     <nav
       className={cn(
-        "fixed w-full z-40 transition-all duration-300",
+        "fixed w-full z-40 transition-all duration-300 text-slate-800 dark:text-white",
         isScrolled
-          ? "py-3 bg-gray-900/80 backdrop-blur-md shadow-md"
+          ? "py-3 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-md"
           : "py-5"
       )}
     >
@@ -41,7 +41,7 @@ const Navbar = () => {
           className="text-xl font-bold text-primary flex items-center"
           href="#hero"
         >
-          <h1 className="font-extrabold text-white flex items-center">
+          <h1 className="font-extrabold text-slate-900 dark:text-white flex items-center">
             <span className="text-[#00ff94]">S</span>
             <span className="text-[#38bdf8]">EF</span>
             <span className="text-[#a855f7]">AT</span>
@@ -55,21 +55,21 @@ const Navbar = () => {
             <a
               key={key}
               href={item.href}
-              className="text-gray-300 hover:text-[#00fffb] transition-colors duration-300"
+              className="text-slate-700 hover:text-[#00fffb] transition-colors duration-300 dark:text-gray-300"
             >
               {item.name}
             </a>
           ))}
 
           {/* Theme Toggle */}
-          {/* < ThemeToggle /> */}
+          {/* <ThemeToggle /> */}
 
         </div>
 
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden p-2 text-white z-50"
+          className="md:hidden p-2 text-slate-900 dark:text-white z-50"
         >
           {isMenuOpen ? <X size={26} /> : <Menu size={26} />}
         </button>
@@ -77,7 +77,7 @@ const Navbar = () => {
         {/* Mobile Menu */}
         <div
           className={cn(
-            "fixed inset-0 bg-gray-950/95 backdrop-blur-md flex flex-col items-center justify-center space-y-8 text-xl transition-all duration-300 md:hidden",
+            "fixed inset-0 bg-white/95 text-slate-900 dark:bg-gray-950/95 dark:text-white backdrop-blur-md flex flex-col items-center justify-center space-y-8 text-xl transition-all duration-300 md:hidden",
             isMenuOpen
               ? "opacity-100 pointer-events-auto"
               : "opacity-0 pointer-events-none"
@@ -88,7 +88,7 @@ const Navbar = () => {
             <a
               key={key}
               href={item.href}
-              className="text-gray-300 hover:text-[#00fffb] transition-colors duration-300"
+              className="text-slate-700 hover:text-[#00fffb] transition-colors duration-300 dark:text-gray-300"
               onClick={() => setIsMenuOpen(false)}
             >
               {item.name}

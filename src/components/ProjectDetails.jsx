@@ -1,4 +1,4 @@
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Thumbs } from "swiper/modules";
@@ -11,27 +11,41 @@ import { projects, primaryColor, secondaryColor } from "../data/projects";
 
 const ProjectDetails = () => {
           const { id } = useParams();
+          const navigate = useNavigate();
           const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
           const project = projects.find((p) => p.id === parseInt(id));
 
           if (!project) {
                     return (
-                              <h2 className="text-white text-center mt-20">Project Not Found</h2>
+                              <h2 className="text-slate-900 text-center mt-20 dark:text-white">Project Not Found</h2>
                     );
           }
 
           return (
-                    <section className="bg-gray-950 min-h-screen py-20 px-4">
-                              <div className="max-w-6xl mx-auto bg-gray-900 p-10 rounded-xl">
+                    <section className="bg-background text-foreground min-h-screen py-20 px-4 transition-colors duration-300">
+                              <div className="max-w-6xl mx-auto bg-card border border-border p-10 rounded-xl shadow-lg text-white">
 
-                                        {/* Title */}
-                                        <h1
-                                                  className="text-4xl font-bold mb-8"
-                                                  style={{ color: primaryColor }}
-                                        >
-                                                  {project.name}
-                                        </h1>
+                                        <div className="flex items-center justify-between gap-4 mb-8">
+                                                  <h1
+                                                            className="text-4xl font-bold"
+                                                            style={{ color: primaryColor }}
+                                                  >
+                                                            {project.name}
+                                                  </h1>
+
+                                                  <button
+                                                            onClick={() => navigate("/")}
+                                                            className="flex h-10 w-10 items-center justify-center rounded-full border text-lg font-bold transition-all duration-300 hover:opacity-80"
+                                                            style={{
+                                                                      borderColor: primaryColor,
+                                                                      color: primaryColor,
+                                                            }}
+                                                            aria-label="Close project details"
+                                                  >
+                                                            ×
+                                                  </button>
+                                        </div>
 
                                         {/* Main Slider */}
                                         <Swiper
@@ -64,14 +78,14 @@ const ProjectDetails = () => {
                                                                       <img
                                                                                 src={img}
                                                                                 alt=""
-                                                                                className="w-full h-24 object-cover rounded-lg cursor-pointer border border-gray-700"
+                                                                                className="w-full h-24 object-cover rounded-lg cursor-pointer border border-slate-300 dark:border-gray-700"
                                                                       />
                                                             </SwiperSlide>
                                                   ))}
                                         </Swiper>
 
                                         {/* Description */}
-                                        <p className="text-gray-300 text-lg mb-10">
+                                        <p className="text-white text-lg mb-10">
                                                   {project.description}
                                         </p>
 
@@ -106,7 +120,7 @@ const ProjectDetails = () => {
                                                   Challenges
                                         </h3>
 
-                                        <ul className="space-y-2 mb-10 text-gray-400">
+                                        <ul className="space-y-2 mb-10 text-white">
                                                   {project.challenges.map((item, i) => (
                                                             <li key={i}>• {item}</li>
                                                   ))}

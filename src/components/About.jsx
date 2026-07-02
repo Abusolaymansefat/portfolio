@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import profileImage from "../assets/Abu solayman.png";
 import { FaArrowDown, FaNodeJs, FaReact } from "react-icons/fa";
+import { MdSecurity } from "react-icons/md";
 import {
   SiExpress,
   SiFirebase,
@@ -10,6 +11,10 @@ import {
   SiNextdotjs,
   SiTailwindcss,
   SiVercel,
+  SiTypescript,
+  SiPrisma,
+  SiPostgresql,
+  SiRedux,
 } from "react-icons/si";
 
 const About = () => {
@@ -30,12 +35,17 @@ const About = () => {
     { icon: <SiMongodb />, name: "MongoDB", color: "#4db33d" },
     { icon: <SiVercel />, name: "Vercel", color: "#ffffff" },
     { icon: <SiFirebase />, name: "Firebase", color: "#ffca28" },
+    { icon: <SiTypescript />, name: "TypeScript", description: "Strongly typed React development.", color: "#3178c6" },
+    { icon: <SiPrisma />, name: "Prisma", description: "Modern ORM for database modeling.", color: "#0c344b" },
+    { icon: <SiPostgresql />, name: "PostgreSQL", description: "Reliable production-ready relational database.", color: "#336791" },
+    { icon: <SiRedux />, name: "Redux", description: "Predictable state management for apps.", color: "#764abc" },
+    { icon: <MdSecurity />, name: "BetterAuth", description: "Secure authentication flows for modern apps.", color: "#5a67d8" },
   ];
 
   return (
     <section
       id="about"
-      className="bg-gray-950 text-white py-24 px-6 min-h-screen flex items-center"
+      className="bg-slate-50 text-slate-900 py-5 px-6 min-h-screen flex items-center transition-colors duration-300 dark:bg-gray-950 dark:text-white"
     >
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-14">
 
@@ -100,11 +110,10 @@ const About = () => {
             and contribute to impactful tech solutions while continuously learning
             new technologies.
           </motion.p>
-
           {/* Tech Stack */}
           <motion.div
             variants={item}
-            className="bg-gray-900/60 border border-gray-700 p-6 rounded-2xl backdrop-blur-lg shadow-lg"
+            className="bg-white/80 border border-slate-200 p-6 rounded-2xl backdrop-blur-lg shadow-lg dark:bg-gray-900/60 dark:border-gray-700"
           >
             <h3
               className="text-2xl font-semibold mb-5"
@@ -117,25 +126,31 @@ const About = () => {
               {techStack.map((tech, i) => (
                 <motion.div
                   key={i}
-                  whileHover={{ y: -6, scale: 1.05 }}
-                  className="flex items-center gap-3 bg-gray-800 p-3 rounded-lg hover:bg-gray-700 transition"
+                  initial={{ scale: 0.98, opacity: 0, y: 8 }}
+                  whileInView={{ scale: 1, opacity: 1, y: 0 }}
+                  whileHover={{ scale: 1.06, y: -6 }}
+                  transition={{ type: "spring", stiffness: 200 }}
+                  viewport={{ once: true }}
+                  className="flex items-center gap-3 bg-slate-100 p-3 rounded-lg hover:bg-slate-200 transition dark:bg-gray-800 dark:hover:bg-gray-700"
                 >
                   <div className="text-2xl" style={{ color: tech.color }}>
                     {tech.icon}
                   </div>
-                  <span className="text-gray-300 text-sm">{tech.name}</span>
+                  <span className="text-slate-700 text-sm dark:text-gray-300">{tech.name}</span>
                 </motion.div>
               ))}
             </div>
 
           </motion.div>
 
+
+
           {/* Scroll Indicator */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.5 }}
-            className="mt-12 lg:mt-20 flex justify-center"
+            className="mt-4 lg:mt-6 flex justify-center"
           >
             <motion.div
               animate={{
@@ -157,6 +172,7 @@ const About = () => {
 
       </div>
     </section>
+
   );
 };
 

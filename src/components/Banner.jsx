@@ -35,13 +35,13 @@ const Banner = () => {
 
   const handleDownloadCV = () => {
     const link = document.createElement("a");
-    link.href = "/Abu Solayman Sefat- Frontend Developer-Resume.pdf";
-    link.download = "Abu Solayman Sefat- Frontend Developer-Resume.pdf";
+    link.href = "/Frontend Developer- Abu Solayman Sefat-Resume.pdf";
+    link.download = "Frontend Developer- Abu Solayman Sefat-Resume.pdf";
     link.click();
   };
 
   const handleContactButton = () => {
-    navigate("/contact");
+    navigate("#contact");
   };
 
   const stats = [
@@ -56,7 +56,7 @@ const Banner = () => {
     techIcons.map((Icon, i) => (
       <motion.div
         key={i}
-        className="absolute rounded-full bg-gray-800 border border-gray-600 flex items-center justify-center"
+        className="absolute rounded-full bg-white/90 border border-slate-200 flex items-center justify-center dark:bg-gray-800 dark:border-gray-600"
         style={{
           width: 50,
           height: 50,
@@ -79,7 +79,7 @@ const Banner = () => {
   return (
     <section
       id="home"
-      className="min-h-screen py-20 px-4 bg-gray-950 flex items-center"
+      className="min-h-screen py-5 px-4 bg-slate-50 text-slate-900 flex items-center transition-colors duration-300 dark:bg-gray-950 dark:text-white"
     >
       <div className="max-w-7xl mx-auto w-full">
         {/* Mobile Image */}
@@ -96,7 +96,7 @@ const Banner = () => {
               <img
                 src={profileImage}
                 alt="Abu solayman sefat"
-                className="w-full h-full object-cover rounded-full border-4 border-gray-700 shadow-2xl relative z-10"
+                className="w-full h-full object-cover rounded-full border-4 border-slate-200 shadow-2xl relative z-10 dark:border-gray-700"
               />
               {renderFloatingIcons(140, 100)}
               <motion.div
@@ -114,7 +114,7 @@ const Banner = () => {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
           {/* Left Column */}
           <div className="lg:col-span-2 order-2 lg:order-1">
             <motion.div
@@ -122,7 +122,7 @@ const Banner = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white">
+              <h1 className="text-4xl md:text-6xl font-bold mb-4 text-slate-900 dark:text-white">
                 Hi, I'm{" "}
                 <span style={{ color: primaryColor }}>Abu solayman Sefat </span>
               </h1>
@@ -142,7 +142,7 @@ const Banner = () => {
                 />
               </div>
 
-              <p className="text-lg mb-8 text-gray-400 max-w-2xl">
+              <p className="text-lg mb-8 text-slate-600 max-w-2xl dark:text-gray-400">
                 I build exceptional digital experiences with modern web
                 technologies. Currently specializing in MERN stack development and
                 creating responsive, user-friendly applications.
@@ -156,7 +156,7 @@ const Banner = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3 + index * 0.1 }}
-                    className="bg-gray-900/50 p-4 rounded-lg border border-gray-800 text-center"
+                    className="bg-white/80 p-4 rounded-lg border border-slate-200 text-center shadow-sm dark:bg-gray-900/50 dark:border-gray-800"
                   >
                     <div
                       className="flex justify-center text-2xl mb-2"
@@ -164,7 +164,7 @@ const Banner = () => {
                     >
                       {stat.icon}
                     </div>
-                    <div className="text-2xl font-bold text-white">
+                    <div className="text-2xl font-bold text-slate-900 dark:text-white">
                       {inView ? (
                         <CountUp end={stat.value} duration={2} suffix="+" />
                       ) : (
@@ -184,7 +184,7 @@ const Banner = () => {
                   Resume
                 </GlowingButton>
 
-                <GlowingButton onClick={handleContactButton} size="lg">
+                <GlowingButton onClick={() => document.getElementById("contact")?.scrollIntoView()} size="lg">
                   <IoMdContacts /> Contact Me
                 </GlowingButton>
               </div>
@@ -224,7 +224,7 @@ const Banner = () => {
                 <img
                   src={profileImage}
                   alt="Md Nazmul Hossen"
-                  className="w-full h-full object-cover rounded-full border-4 border-gray-700 shadow-2xl relative z-10"
+                  className="w-full h-full object-cover rounded-full border-4 border-slate-200 shadow-2xl relative z-10 dark:border-gray-700"
                 />
                 {renderFloatingIcons(220, 170)}
                 <motion.div
@@ -248,7 +248,7 @@ const Banner = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5 }}
-          className="mt-12 lg:mt-20 flex justify-center"
+          className="mt-4 lg:mt-6 flex justify-center"
         >
           <motion.div
             animate={{
