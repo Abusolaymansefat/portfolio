@@ -25,6 +25,7 @@ import SocialCircleButton from "./Button/SocialCircleButton";
 
 const Banner = () => {
   const primaryColor = "#00ff94";
+  // const primaryColor = "var(--primary)";
   const grayColor = "#6b7280";
   const navigate = useNavigate();
 

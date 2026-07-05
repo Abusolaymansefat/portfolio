@@ -26,7 +26,7 @@ const Education = () => {
   return (
     <section
       id="education"
-      className="min-h-screen py-5 px-6 bg-slate-50 text-slate-900 transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100"
+      className="py-5 pb-6 px-6 bg-white text-black transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100"
       style={{ scrollMarginTop: "70px" }}
     >
       <div className="container mx-auto max-w-4xl">
@@ -44,46 +44,52 @@ const Education = () => {
           {educationData.map((edu, index) => (
             <motion.div
               key={index}
-              className="mb-4 ml-4 relative"
+              className={`${index === educationData.length - 1 ? "mb-0" : "mb-4"
+                } ml-4 relative`}
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
             >
-              {/* Dot */}
+              {/* Timeline Dot */}
               <div
                 className="absolute w-4 h-4 rounded-full -left-[9px] mt-2"
                 style={{ backgroundColor: primaryColor }}
-              ></div>
+              />
 
-              {/* Animated Card */}
+              {/* Card */}
               <motion.div
                 whileHover={{
-                  scale: 1.04,
-                  opacity: 1,
+                  scale: 1.03,
+                  y: -5,
+                  boxShadow: "0 15px 30px rgba(0,255,251,0.2)",
                 }}
                 transition={{ type: "spring", stiffness: 200 }}
-                className="relative p-3 bg-white/80 border border-slate-200 backdrop-blur-md rounded-lg shadow-lg cursor-pointer overflow-hidden group dark:bg-gray-800/70 dark:border-gray-700"
+                className="relative p-5 bg-white border border-gray-200 rounded-xl shadow-lg overflow-hidden group cursor-pointer dark:bg-gray-800 dark:border-gray-700"
               >
-                {/* Fade overlay effect */}
+                {/* Hover Glow */}
                 <motion.div
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                   style={{
                     background: `linear-gradient(90deg, transparent, ${primaryColor}20, transparent)`,
                   }}
-                ></motion.div>
+                />
 
+                {/* Degree */}
                 <h3
-                  className="text-xl font-semibold mb-1 relative z-10"
+                  className="text-xl font-semibold mb-2 relative z-10"
                   style={{ color: primaryColor }}
                 >
                   {edu.degree}
                 </h3>
-                <p className="text-sm text-slate-600 relative z-10 dark:text-gray-300">
+
+                {/* Institution */}
+                <p className="text-sm text-gray-600 dark:text-gray-300 relative z-10">
                   {edu.institution}
                 </p>
 
-                <p className="mt-2 leading-relaxed text-slate-700 relative z-10 dark:text-gray-200">
+                {/* Details */}
+                <p className="mt-3 leading-7 text-gray-700 dark:text-gray-200 relative z-10">
                   <span className="font-semibold">Board:</span> {edu.board}
                   <br />
                   <span className="font-semibold">Group:</span> {edu.group}
@@ -91,8 +97,8 @@ const Education = () => {
                   <span className="font-semibold">Session:</span> {edu.year}
                 </p>
 
-                {/* Animated underline progress bar */}
-                <div className="w-full bg-slate-200 rounded-full h-1.5 mt-4 overflow-hidden relative z-10 dark:bg-gray-700">
+                {/* Progress Bar */}
+                <div className="w-full h-1.5 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden mt-5 relative z-10">
                   <motion.div
                     initial={{ width: 0 }}
                     whileInView={{ width: "100%" }}
@@ -117,11 +123,11 @@ const Education = () => {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ delay: 1 }}
-        className="text-center"
+        className="text-center -mt-2 mb-0 pb-0"
       >
         <motion.div
           animate={{
-            y: [0, 15, 0],
+            y: [0, 12, 0],
             opacity: [0.6, 1, 0.6],
           }}
           transition={{
@@ -131,7 +137,9 @@ const Education = () => {
           style={{ color: primaryColor }}
           className="flex flex-col items-center cursor-pointer"
           onClick={() =>
-            document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
+            document
+              .getElementById("contact")
+              ?.scrollIntoView({ behavior: "smooth" })
           }
         >
           <FaArrowDown className="text-2xl" />

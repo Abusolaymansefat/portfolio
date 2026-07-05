@@ -41,11 +41,11 @@ const Navbar = () => {
           className="text-xl font-bold text-primary flex items-center"
           href="#hero"
         >
-          <h1 className="font-extrabold text-slate-900 dark:text-white flex items-center">
+          <span className="font-extrabold text-slate-900 dark:text-white flex items-center">
             <span className="text-[#00ff94]">S</span>
             <span className="text-[#38bdf8]">EF</span>
             <span className="text-[#a855f7]">AT</span>
-          </h1>
+          </span>
         </a>
 
         {/* Desktop Nav */}
@@ -62,7 +62,7 @@ const Navbar = () => {
           ))}
 
           {/* Theme Toggle */}
-          {/* <ThemeToggle /> */}
+          <ThemeToggle />
 
         </div>
 
@@ -100,13 +100,15 @@ const Navbar = () => {
             onClick={() => setIsMenuOpen(false)}
             className="mt-4"
           >
-            {/* <ThemeToggle /> */}
+            <ThemeToggle />
           </div>
 
         </div>
       </div>
     </nav>
+
   );
+
 };
 
 export default Navbar;

@@ -5,6 +5,8 @@ import { projects, primaryColor, secondaryColor } from "../data/projects";
 import ProjectCard from "./ProjectCard";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
+import GlowingButton from "./Button/GlowingButton";
+
 
 const Projects = () => {
   const [visibleCount, setVisibleCount] = useState(3);
@@ -32,12 +34,12 @@ const Projects = () => {
         ))}
 
         {projects.length > 3 && (
-          <button
+          <GlowingButton
             onClick={toggleProjects}
-            className="mx-auto mt-2 inline-flex items-center justify-center rounded-full border border-[#00fffb] px-6 py-2 text-sm font-semibold text-[#00fffb] transition-all duration-300 hover:bg-[#00fffb] hover:text-slate-900 dark:hover:text-gray-950"
+            className="mx-auto mt-2"
           >
             {isExpanded ? "Show Less" : "See More"}
-          </button>
+          </GlowingButton>
         )}
 
         {/* Scroll Indicator */}

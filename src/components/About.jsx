@@ -18,6 +18,8 @@ import {
 } from "react-icons/si";
 
 const About = () => {
+  // const primaryColor = "var(--primary)";
+  // const secondaryColor = "var(--secondary)";
   const primaryColor = "#00fffb";
   const secondaryColor = "#00D1FF";
 

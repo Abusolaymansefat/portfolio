@@ -19,7 +19,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-slate-100 text-slate-700 py-5 transition-colors duration-300 dark:bg-gray-900 dark:text-gray-300">
+    <footer className="bg-slate-100 text-slate-700 transition-colors duration-300 dark:bg-gray-900 dark:text-gray-300">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
         {/* Left: Logo */}
         <motion.div
